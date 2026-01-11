@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dadou’s – Fast Food & Service Traiteur</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Seafood, fast food, pâtisserie et décoration événementielle à Cap-Haïtien." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Boutons flottants -->
+  <div class="floating-actions">
+    <a class="fab fab-wa" target="_blank" rel="noopener" href="https://wa.me/50938348938">WhatsApp</a>
+    <a class="fab fab-order" href="javascript:void(0)" onclick="toggleCart()">🛒 Mon Panier</a>
+  </div>
+
+  <!-- Header -->
+  <header class="top">
+    <div class="brand">
+      <div class="brand-badge">D</div>
+      <div class="brand-text">
+        <div class="brand-name">Dadou’s</div>
+        <div class="brand-sub">Fast Food • Traiteur • Décoration</div>
+      </div>
+    </div>
+
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="nav">
+      <a href="#accueil" class="active">Accueil</a>
+      <a href="#menu">Menu</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#paiement">Paiement</a>
+      <a href="#commander">Commander</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="accueil" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <div class="hero-pill">Cap-Haïtien • Livraison disponible</div>
+      <h1>Saveurs uniques & Décorations inoubliables</h1>
+      <p>Seafood • Fast Food • Pâtisserie • Décoration événementielle</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">Voir le menu</a>
+        <a href="#commander" class="btn btn-ghost">Commander</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Menu & Prix (HTG)</h2>
+        <p>Cliquez sur le <strong>+</strong> pour ajouter à votre panier.</p>
+      </div>
+
+      <div class="cards-grid">
+
+        <!-- SEAFOOD -->
+        <div class="card">
+          <div class="card-title">SEAFOOD</div>
+          <ul class="list">
+            <li class="menu-item"><span>Plateau seafood</span><strong>3375</strong><button class="add-to-cart" data-name="Plateau seafood" data-price="3375">+</button></li>
+            <li class="menu-item"><span>Pieuvre</span><strong>1500</strong><button class="add-to-cart" data-name="Pieuvre" data-price="1500">+</button></li>
+            <li class="menu-item"><span>Poisson</span><strong>1500</strong><button class="add-to-cart" data-name="Poisson" data-price="1500">+</button></li>
+            <li class="menu-item"><span>Lambi</span><strong>1750</strong><button class="add-to-cart" data-name="Lambi" data-price="1750">+</button></li>
+          </ul>
+        </div>
+
+        <!-- LASAGNES & PLATS -->
+        <div class="card">
+          <div class="card-title">LASAGNES & PLATS</div>
+          <ul class="list">
+            <li class="menu-item"><span>Lasagne portion (1000)</span><strong>1000</strong><button class="add-to-cart" data-name="Lasagne portion (1000)" data-price="1000">+</button></li>
+            <li class="menu-item"><span>Lasagne portion (1500)</span><strong>1500</strong><button class="add-to-cart" data-name="Lasagne portion (1500)" data-price="1500">+</button></li>
+            <li class="menu-item"><span>Gratiné portion</span><strong>1000</strong><button class="add-to-cart" data-name="Gratiné portion" data-price="1000">+</button></li>
+            <li class="menu-item"><span>Combo lasagne + boisson</span><strong>2500</strong><button class="add-to-cart" data-name="Combo lasagne + boisson" data-price="2500">+</button></li>
+            <li class="menu-item"><span>Burger</span><strong>1700</strong><button class="add-to-cart" data-name="Burger" data-price="1700">+</button></li>
+            <li class="menu-item"><span>Tonmtonm</span><strong>1500</strong><button class="add-to-cart" data-name="Tonmtonm" data-price="1500">+</button></li>
+            <li class="menu-item"><span>Cornet</span><strong>500</strong><button class="add-to-cart" data-name="Cornet" data-price="500">+</button></li>
+            <li class="menu-item"><span>Tacos</span><strong>1000</strong><button class="add-to-cart" data-name="Tacos" data-price="1000">+</button></li>
+            <li class="menu-item"><span>Tresse Royale</span><strong>800</strong><button class="add-to-cart" data-name="Tresse Royale" data-price="800">+</button></li>
+            <li class="menu-item"><span>Riz Lalo – Saveur Lakay</span><strong>1000</strong><button class="add-to-cart" data-name="Riz Lalo" data-price="1000">+</button></li>
+            <li class="menu-item"><span>Fritures</span><strong>1500</strong><button class="add-to-cart" data-name="Fritures" data-price="1500">+</button></li>
+            <li class="menu-item"><span>Tassot portion</span><strong>1500</strong><button class="add-to-cart" data-name="Tassot portion" data-price="1500">+</button></li>
+            <li class="menu-item"><span>Tassot + Lasagne</span><strong>1775</strong><button class="add-to-cart" data-name="Tassot + Lasagne" data-price="1775">+</button></li>
+            <li class="menu-item"><span>BBQ</span><strong>1000</strong><button class="add-to-cart" data-name="BBQ" data-price="1000">+</button></li>
+            <li class="menu-item"><span>Griot</span><strong>1000</strong><button class="add-to-cart" data-name="Griot" data-price="1000">+</button></li>
+            <li class="menu-item"><span>Pâté</span><strong>250</strong><button class="add-to-cart" data-name="Pâté" data-price="250">+</button></li>
+          </ul>
+        </div>
+
+        <!-- PIZZAS -->
+        <div class="card">
+          <div class="card-title">PIZZAS</div>
+          <ul class="list">
+            <li class="menu-item"><span>Pizza (Small)</span><strong>1500</strong><button class="add-to-cart" data-name="Pizza (Small)" data-price="1500">+</button></li>
+            <li class="menu-item"><span>Pizza (Medium)</span><strong>2250</strong><button class="add-to-cart" data-name="Pizza (Medium)" data-price="2250">+</button></li>
+            <li class="menu-item"><span>Pizza (Large)</span><strong>3000</strong><button class="add-to-cart" data-name="Pizza (Large)" data-price="3000">+</button></li>
+            <li class="menu-item"><span>Pizza Lambi / Crevettes / Porc</span><strong>2000</strong><button class="add-to-cart" data-name="Pizza Lambi / Crevettes / Porc" data-price="2000">+</button></li>
+          </ul>
+        </div>
+
+        <!-- PÂTISSERIE -->
+        <div class="card">
+          <div class="card-title">PÂTISSERIE</div>
+          <ul class="list">
+            <li class="menu-item"><span>Cupcakes (6)</span><strong>700</strong><button class="add-to-cart" data-name="Cupcakes (6)" data-price="700">+</button></li>
+            <li class="menu-item"><span>Cupcakes (12)</span><strong>1400</strong><button class="add-to-cart" data-name="Cupcakes (12)" data-price="1400">+</button></li>
+            <li class="menu-item"><span>Gâteau anniversaire</span><strong>4500</strong><button class="add-to-cart" data-name="Gâteau anniversaire" data-price="4500">+</button></li>
+          </ul>
+        </div>
+
+        <!-- DÉCORATION -->
+        <div class="card">
+          <div class="card-title">DÉCORATION & FLEURS</div>
+          <ul class="list">
+            <li class="menu-item"><span>Pack simple</span><strong>20000</strong><button class="add-to-cart" data-name="Pack simple" data-price="20000">+</button></li>
+            <li class="menu-item"><span>Pack romantique</span><strong>40000</strong><button class="add-to-cart" data-name="Pack romantique" data-price="40000">+</button></li>
+            <li class="menu-item"><span>Bouquets fleurs</span><strong>5000</strong><button class="add-to-cart" data-name="Bouquets fleurs" data-price="5000">+</button></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PANIER MODAL -->
+  <div id="cart-modal" aria-hidden="true">
+    <h3>🛒 Votre Commande</h3>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span class="label">TOTAL :</span>
+        <span class="value"><span id="cart-total">0</span> HTG</span>
+      </div>
+
+      <button id="btn-checkout" class="btn btn-primary w-full" type="button" disabled>
+        Finaliser la commande
+      </button>
+
+      <p class="delivery-note">
+        ⚠️ Les frais de livraison ne sont pas inclus dans le total. Ils seront confirmés sur WhatsApp.
+      </p>
+
+      <button class="btn btn-ghost w-full" type="button" onclick="toggleCart()">
+        Continuer les achats
+      </button>
+    </div>
+  </div>
+
+  <!-- GALERIE -->
+  <section id="galerie" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Galerie</h2>
+        <p>Découvrez nos réalisations (Nourriture • Décoration • Pâtisserie)</p>
+      </div>
+
+      <div class="gallery">
+
+        <!-- DÉCORATION -->
+        <img class="gimg zoomable" src="images/decoration/amour.jpeg" alt="Décoration - amour" loading="lazy">
+        <img class="gimg zoomable" src="images/decoration/chambredeco.jpeg" alt="Décoration - chambre" loading="lazy">
+        <img class="gimg zoomable" src="images/decoration/dadoudecor.jpeg" alt="Décoration - Dadou decor" loading="lazy">
+        <img class="gimg zoomable" src="images/decoration/deco-01.jpg" alt="Décoration 1" loading="lazy">
+        <img class="gimg zoomable" src="images/decoration/deco-02.jpg" alt="Décoration 2" loading="lazy">
+        <img class="gimg zoomable" src="images/decoration/deco-03.jpg" alt="Décoration 3" loading="lazy">
+        <img class="gimg zoomable" src="images/decoration/deco-04.jpg" alt="Décoration 4" loading="lazy">
+        <img class="gimg zoomable" src="images/decoration/deco-05.jpg" alt="Décoration 5" loading="lazy">
+        <img class="gimg zoomable" src="images/decoration/deco-06.jpg" alt="Décoration 6" loading="lazy">
+        <img class="gimg zoomable" src="images/decoration/deco-07.jpg" alt="Décoration 7" loading="lazy">
+        <img class="gimg zoomable" src="images/decoration/deco-08.jpg" alt="Décoration 8" loading="lazy">
+        <img class="gimg zoomable" src="images/decoration/decor.jpeg" alt="Décoration - decor" loading="lazy">
+        <img class="gimg zoomable" src="images/decoration/fleur-.jpeg" alt="Décoration - fleurs" loading="lazy">
+        <img class="gimg zoomable" src="images/decoration/fleurrose.jpeg" alt="Décoration - roses" loading="lazy">
+        <img class="gimg zoomable" src="images/decoration/occasion.jpeg" alt="Décoration - occasion" loading="lazy">
+        <img class="gimg zoomable" src="images/decoration/romantique-1.jpeg" alt="Décoration - romantique 1" loading="lazy">
+        <img class="gimg zoomable" src="images/decoration/romantique-.jpeg" alt="Décoration - romantique" loading="lazy">
+        <img class="gimg zoomable" src="images/decoration/rose-1.jpeg" alt="Décoration - rose 1" loading="lazy">
+        <img class="gimg zoomable" src="images/decoration/rose-.jpeg" alt="Décoration - rose" loading="lazy">
+        <img class="gimg zoomable" src="images/decoration/suprise-1.jpeg" alt="Décoration - surprise" loading="lazy">
+        <img class="gimg zoomable" src="images/decoration/tablechic-1.jpeg" alt="Décoration - table chic" loading="lazy">
+
+        <!-- NOURRITURE -->
+        <img class="gimg zoomable" src="images/nourriture/banannpe_hotdog.jpeg" alt="Nourriture - hotdog" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/mbolasagne.jpeg" alt="Nourriture - lasagne" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/cornet-1.jpeg" alt="Nourriture - cornet" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/drilalo-1.jpeg" alt="Nourriture - lalo" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/food-01.jpg" alt="Nourriture 1" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/food-02.jpg" alt="Nourriture 2" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/food-03.jpg" alt="Nourriture 3" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/food-04.jpg" alt="Nourriture 4" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/food-05.jpg" alt="Nourriture 5" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/food-06.jpg" alt="Nourriture 6" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/food-07.jpg" alt="Nourriture 7" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/food-08.jpg" alt="Nourriture 8" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/food-09.jpg" alt="Nourriture 9" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/food-10.jpg" alt="Nourriture 10" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/food-11.jpg" alt="Nourriture 11" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/food-12.jpg" alt="Nourriture 12" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/food-13.jpg" alt="Nourriture 13" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/food-14.jpg" alt="Nourriture 14" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/food-15.jpg" alt="Nourriture 15" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/food-16.jpg" alt="Nourriture 16" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/food-17.jpg" alt="Nourriture 17" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/food-18.jpg" alt="Nourriture 18" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/food-19.jpg" alt="Nourriture 19" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/food-20.jpg" alt="Nourriture 20" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/lasagnebarbecuecombo-1.jpeg" alt="Nourriture - lasagne bbq combo" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/lasagneplat-1.jpeg" alt="Nourriture - lasagne plat" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/pizza-1.jpeg" alt="Nourriture - pizza" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/plateaulasagne1.jpeg" alt="Nourriture - plateau lasagne" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/poisson-1.jpeg" alt="Nourriture - poisson" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/seafood1.jpeg" alt="Nourriture - seafood" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/tonmtomn-1.jpeg" alt="Nourriture - tonmtonm" loading="lazy">
+        <img class="gimg zoomable" src="images/nourriture/tresseroyale-1.jpeg" alt="Nourriture - tresse royale" loading="lazy">
+
+        <!-- PÂTISSERIE -->
+        <img class="gimg zoomable" src="images/patisserie/anniversaire.jpeg" alt="Pâtisserie - anniversaire" loading="lazy">
+        <img class="gimg zoomable" src="images/patisserie/cupcake.jpeg" alt="Pâtisserie - cupcake" loading="lazy">
+        <img class="gimg zoomable" src="images/patisserie/delice.jpeg" alt="Pâtisserie - délice" loading="lazy">
+        <img class="gimg zoomable" src="images/patisserie/fruitsrenverses.jpeg" alt="Pâtisserie - fruits renversés" loading="lazy">
+        <img class="gimg zoomable" src="images/patisserie/gato-1.jpeg" alt="Pâtisserie - gâteau 1" loading="lazy">
+        <img class="gimg zoomable" src="images/patisserie/happybirthday.jpeg" alt="Pâtisserie - happy birthday" loading="lazy">
+        <img class="gimg zoomable" src="images/patisserie/patisserie-01.jpg" alt="Pâtisserie 1" loading="lazy">
+        <img class="gimg zoomable" src="images/patisserie/patisserie-02.jpg" alt="Pâtisserie 2" loading="lazy">
+        <img class="gimg zoomable" src="images/patisserie/patisserie-03.jpg" alt="Pâtisserie 3" loading="lazy">
+        <img class="gimg zoomable" src="images/patisserie/patisserie-04.jpg" alt="Pâtisserie 4" loading="lazy">
+        <img class="gimg zoomable" src="images/patisserie/patisserie-05.jpg" alt="Pâtisserie 5" loading="lazy">
+        <img class="gimg zoomable" src="images/patisserie/patisserie-06.jpg" alt="Pâtisserie 6" loading="lazy">
+        <img class="gimg zoomable" src="images/patisserie/patisserie-07.jpg" alt="Pâtisserie 7" loading="lazy">
+        <img class="gimg zoomable" src="images/patisserie/patisserie-08.jpg" alt="Pâtisserie 8" loading="lazy">
+        <img class="gimg zoomable" src="images/patisserie/patisserie-09.jpg" alt="Pâtisserie 9" loading="lazy">
+        <img class="gimg zoomable" src="images/patisserie/rose.jpeg" alt="Pâtisserie - rose" loading="lazy">
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIEMENT -->
+  <section id="paiement" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Paiement</h2>
+        <p>Scannez le QR Code ou envoyez la preuve sur WhatsApp</p>
+      </div>
+
+      <div class="cards-grid">
+
+        <div class="card" style="grid-column:span 6">
+          <div class="card-title">MonCash</div>
+          <p>📱 +509 46 93 1693</p>
+          <img src="images/pay/moncash.png" alt="QR MonCash" class="pay-qr zoomable" loading="lazy">
+        </div>
+
+        <div class="card" style="grid-column:span 6">
+          <div class="card-title">NatCash</div>
+          <p>📱 +509 43 10 4714</p>
+          <img src="images/pay/natcash.png" alt="QR NatCash" class="pay-qr zoomable" loading="lazy">
+        </div>
+
+      </div>
+
+      <div class="card" style="margin-top:14px">
+        <div class="card-title">Confirmation</div>
+        <p>Après paiement, envoyez la capture ou le code de confirmation sur WhatsApp.</p><div class="delivery-note">
+  <strong>🚚 Service de livraison disponible</strong><br><br>
+
+  <strong>Morne Rouge → Centre Ville</strong><br>
+  Frais de livraison : <strong>50 HTG à 225 HTG</strong><br><br>
+
+  <strong>Quartier Morin → Centre Ville</strong><br>
+  Frais de livraison : <strong>50 HTG à 325 HTG</strong><br><br>
+
+  <strong>⚠️ Important :</strong><br>
+  Les frais de livraison <strong>ne sont pas inclus</strong> dans le paiement.
+  Ils doivent être réglés avec la commande.<br><br>
+
+  En dehors de ces zones, les frais de livraison seront fixés avec vous
+  lors de la confirmation sur WhatsApp.
+</div>
+        <a href="https://wa.me/50938348938" target="_blank" class="btn btn-primary w-full">
+          Envoyer la preuve sur WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMANDER -->
+  <section id="commander" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Placer votre commande</h2>
+        <p>Remplissez vos infos, le panier est déjà prêt !</p>
+      </div>
+
+      <form id="orderForm" class="order-form">
+        <label>Nom complet</label>
+        <input type="text" id="nom" required placeholder="Votre nom">
+
+        <label>WhatsApp</label>
+        <input type="tel" id="phone" required placeholder="Votre numéro (ex: 38348938)">
+
+        <label>Mode de Paiement</label>
+        <select id="paiementMode">
+          <option>MonCash</option>
+          <option>NatCash</option>
+          <option>Cash</option>
+        </select>
+
+        <label>Adresse de livraison</label>
+        <textarea id="adresse" rows="3" required placeholder="Rue, quartier, repère..."></textarea>
+
+        <button class="btn btn-primary" type="submit">Envoyer la commande (WhatsApp)</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>Commande • Infos • Livraison • Décoration</p>
+      </div>
+
+      <div class="contact-box">
+        <div>
+          <div class="label">WhatsApp</div>
+          <a class="biglink" target="_blank" rel="noopener" href="https://wa.me/50938348938">+509 38 34 8938</a>
+        </div>
+        <div>
+          <div class="label">Zone</div>
+          <div class="text">Cap-Haïtien • Morne Rouge • Centre Ville • Quartier Morin</div>
+        </div>
+        <div>
+          <div class="label">Instagram</div>
+          <a class="biglink" target="_blank" rel="noopener" href="https://www.instagram.com/dadous_fast_food_et_entreprise">Voir la page</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container" style="text-align:center">
+      ©️ 2026 Dadou’s – Tous droits réservés
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
